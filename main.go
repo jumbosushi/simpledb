@@ -9,6 +9,17 @@ import (
 // Version defines current version
 var Version = "0.0.1"
 
+// Database is data type for database
+type Database struct {
+	Name   string
+	Tables []Table
+}
+
+// Table is data type for table
+type Table struct {
+	Name string
+}
+
 func main() {
 	fmt.Println(Intro())
 	fmt.Println("Type \"help\" for help")
@@ -25,9 +36,10 @@ func Prompt() {
 	}
 
 	input := string(sentence)
-	if input == "quit\n" {
+	switch input {
+	case "quit\n":
 		os.Exit(0)
-	} else {
+	default:
 		fmt.Println(input)
 	}
 	Prompt()
