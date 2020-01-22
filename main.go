@@ -9,6 +9,18 @@ import (
 // Version defines current version
 var Version = "0.0.1"
 
+type Page struct {
+	Header  PageHeader
+	Slots   []Slot
+	Tuplues []Tuple
+}
+
+type PageHeader struct {
+	PageSize int
+	Checkum  int
+	Version  int
+}
+
 // Database is data type for database
 type Database struct {
 	Name   string
