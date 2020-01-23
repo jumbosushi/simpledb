@@ -18,17 +18,6 @@ type Header struct {
 	Version  int
 }
 
-// Tuple hold data for each row
-type Tuple struct {
-	Header     TupleHeader
-	Attributes map[string]interface{}
-}
-
-// TupleHeader hold meta-data for tuples
-type TupleHeader struct {
-	Visibility int
-}
-
 // Database is data type for database
 type Database struct {
 	Name   string
