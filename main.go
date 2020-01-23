@@ -1,6 +1,8 @@
 package main
 
 import (
+	"jumbosushi/simpledb/page"
+
 	"bufio"
 	"fmt"
 	"os"
@@ -8,29 +10,6 @@ import (
 
 // Version defines current version
 var Version = "0.0.1"
-
-type Page struct {
-	Header  PageHeader
-	Slots   []Slot
-	Tuplues []Tuple
-}
-
-type PageHeader struct {
-	PageSize int
-	Checkum  int
-	Version  int
-}
-
-// Database is data type for database
-type Database struct {
-	Name   string
-	Tables []Table
-}
-
-// Table is data type for table
-type Table struct {
-	Name string
-}
 
 func main() {
 	fmt.Println(Intro())
@@ -40,6 +19,7 @@ func main() {
 
 // Prompt asks prompt
 func Prompt() {
+	page.Hello()
 	buf := bufio.NewReader(os.Stdin)
 	fmt.Print("> ")
 	sentence, err := buf.ReadBytes('\n')
