@@ -2,6 +2,7 @@ package page
 
 import (
 	"fmt"
+	"jumbosushi/simpledb/tuple"
 )
 
 // Page hold the info for each tuple
@@ -27,6 +28,15 @@ type Database struct {
 // Table is data type for table
 type Table struct {
 	Name string
+}
+
+// Write tuple
+func Write() bool {
+}
+
+// Read tuple
+func Read() []Tuple {
+
 }
 
 // Hello is test method for now
