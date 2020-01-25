@@ -10,3 +10,12 @@ type Tuple struct {
 type Header struct {
 	Visibility int
 }
+
+// Write data
+func Write() bool {
+}
+
+// Read data
+func Read() []Tuple {
+
+}
